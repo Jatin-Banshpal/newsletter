@@ -1,0 +1,137 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:issue_title",
+ "creation": "2026-08-29 00:00:00.000000",
+ "description": "One published edition of the company newsletter. Pick the sections it contains (in order); contributors then file Topics against this issue.",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "issue_title",
+  "publish_date",
+  "column_break_title",
+  "status",
+  "cover_image",
+  "sections_section",
+  "sections",
+  "topics",
+  "style_section",
+  "style",
+  "description_section",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "issue_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Issue Title",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "publish_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Publish Date"
+  },
+  {
+   "fieldname": "column_break_title",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nIn Review\nPublished"
+  },
+  {
+   "fieldname": "cover_image",
+   "fieldtype": "Attach Image",
+   "label": "Cover Image"
+  },
+  {
+   "fieldname": "sections_section",
+   "fieldtype": "Section Break",
+   "label": "Sections"
+  },
+  {
+   "description": "Sections print in this order. Drag to reorder. Use \"Copy Layout From...\" to reuse last month's structure.",
+   "fieldname": "sections",
+   "fieldtype": "Table",
+   "label": "Sections",
+   "options": "Newsletter Issue Section"
+  },
+  {
+   "description": "Which topic goes under which section, and in what order within the section. Topics with no content in this issue are skipped when printing.",
+   "fieldname": "topics",
+   "fieldtype": "Table",
+   "label": "Topics",
+   "options": "Newsletter Issue Topic"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "style_section",
+   "fieldtype": "Section Break",
+   "label": "Style"
+  },
+  {
+   "description": "Theme for this issue (colours, fonts, layout). Sections may override it.",
+   "fieldname": "style",
+   "fieldtype": "Link",
+   "label": "Style",
+   "options": "Newsletter Style"
+  },
+  {
+   "fieldname": "description_section",
+   "fieldtype": "Section Break",
+   "label": "Introduction"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Introduction"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "group": "Content",
+   "link_doctype": "Newsletter Content",
+   "link_fieldname": "newsletter_issue"
+  }
+ ],
+ "modified": "2026-08-30 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Newsletter",
+ "name": "Newsletter Issue",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Employee"
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "issue_title",
+ "track_changes": 1
+}

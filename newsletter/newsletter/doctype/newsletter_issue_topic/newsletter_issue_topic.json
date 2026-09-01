@@ -1,0 +1,47 @@
+{
+ "actions": [],
+ "creation": "2026-08-30 14:00:00.000000",
+ "description": "A topic placed under a section in a Newsletter Issue. Row order = print order within the section.",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "topic",
+  "section"
+ ],
+ "fields": [
+  {
+   "columns": 5,
+   "fieldname": "topic",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Topic",
+   "options": "Newsletter Topic",
+   "reqd": 1
+  },
+  {
+   "columns": 5,
+   "description": "Must be one of the issue's Sections. Pre-filled from the topic's default section.",
+   "fetch_from": "topic.section",
+   "fetch_if_empty": 1,
+   "fieldname": "section",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Section",
+   "options": "Newsletter Section",
+   "reqd": 1
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2026-08-30 14:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Newsletter",
+ "name": "Newsletter Issue Topic",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

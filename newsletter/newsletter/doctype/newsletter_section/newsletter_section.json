@@ -1,0 +1,101 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:section_name",
+ "creation": "2026-08-29 00:00:00.000000",
+ "description": "A reusable section heading (e.g. Products, CS17, Brew with Hussain). Add it to any number of Newsletter Issues via the issue's Sections table.",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_name",
+  "default_highlight",
+  "column_break_name",
+  "description",
+  "style_section",
+  "style"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Section Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "default": "0",
+   "description": "Pre-ticks \"Highlight as Panel\" when this section is added to an issue.",
+   "fieldname": "default_highlight",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Highlight by Default"
+  },
+  {
+   "fieldname": "column_break_name",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Guidance for contributors: what belongs in this section. Not printed.",
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "style_section",
+   "fieldtype": "Section Break",
+   "label": "Style (optional override)"
+  },
+  {
+   "description": "Default style override whenever this section appears. Can be overridden again per issue.",
+   "fieldname": "style",
+   "fieldtype": "Link",
+   "label": "Style",
+   "options": "Newsletter Style"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "group": "Content",
+   "link_doctype": "Newsletter Topic",
+   "link_fieldname": "section"
+  },
+  {
+   "group": "Content",
+   "link_doctype": "Newsletter Content",
+   "link_fieldname": "section"
+  }
+ ],
+ "modified": "2026-08-30 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Newsletter",
+ "name": "Newsletter Section",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Employee"
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

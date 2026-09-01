@@ -1,0 +1,336 @@
+{
+ "actions": [],
+ "autoname": "field:style_name",
+ "creation": "2026-08-29 00:00:00.000000",
+ "description": "A complete visual theme for the newsletter: colours, typography, layout, borders, watermark and custom CSS. Applied on a Newsletter Issue; Sections and Topics can override it.",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "style_name",
+  "column_break_identity",
+  "theme_notes",
+  "colours_section",
+  "background_color",
+  "text_color",
+  "column_break_colours_2",
+  "accent_color",
+  "muted_text_color",
+  "divider_color",
+  "column_break_colours_3",
+  "panel_background_color",
+  "card_background_color",
+  "section_accent_palette",
+  "typography_section",
+  "display_font",
+  "heading_font",
+  "column_break_type_2",
+  "label_font",
+  "font_family",
+  "column_break_type_3",
+  "heading_style",
+  "body_font_size",
+  "line_height",
+  "paragraph_spacing",
+  "layout_section",
+  "masthead_alignment",
+  "show_section_numbers",
+  "accent_headings",
+  "column_break_layout_2",
+  "divider_style",
+  "corner_radius",
+  "border_section",
+  "border_color",
+  "border_width",
+  "column_break_border",
+  "border_style",
+  "watermark_section",
+  "watermark_image",
+  "watermark_opacity",
+  "column_break_watermark",
+  "header_banner_image",
+  "advanced_section",
+  "custom_css"
+ ],
+ "fields": [
+  {
+   "fieldname": "style_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Style Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_identity",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "What this theme is going for - shown nowhere in the newsletter, just a note for editors.",
+   "fieldname": "theme_notes",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Theme Notes"
+  },
+  {
+   "fieldname": "colours_section",
+   "fieldtype": "Section Break",
+   "label": "Colours"
+  },
+  {
+   "description": "Page background.",
+   "fieldname": "background_color",
+   "fieldtype": "Color",
+   "label": "Background Colour"
+  },
+  {
+   "fieldname": "text_color",
+   "fieldtype": "Color",
+   "label": "Text Colour"
+  },
+  {
+   "fieldname": "column_break_colours_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Links, section dots, rules, wordmark, avatars.",
+   "fieldname": "accent_color",
+   "fieldtype": "Color",
+   "label": "Accent Colour"
+  },
+  {
+   "description": "Labels, dates, captions, roles.",
+   "fieldname": "muted_text_color",
+   "fieldtype": "Color",
+   "label": "Muted Text Colour"
+  },
+  {
+   "description": "Hairlines between sections and topics.",
+   "fieldname": "divider_color",
+   "fieldtype": "Color",
+   "label": "Divider Colour"
+  },
+  {
+   "fieldname": "column_break_colours_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Background of a Section marked \"Highlight as Panel\". Leave blank to tint with the accent colour.",
+   "fieldname": "panel_background_color",
+   "fieldtype": "Color",
+   "label": "Panel Background Colour"
+  },
+  {
+   "description": "Background of each topic card inside a highlighted panel. Leave blank to use the page background.",
+   "fieldname": "card_background_color",
+   "fieldtype": "Color",
+   "label": "Card Background Colour"
+  },
+  {
+   "description": "Optional comma-separated list of hex colours, e.g. #ff2d55,#ff9500,#34c759. Each section takes the next colour as its accent.",
+   "fieldname": "section_accent_palette",
+   "fieldtype": "Data",
+   "label": "Section Accent Palette"
+  },
+  {
+   "fieldname": "typography_section",
+   "fieldtype": "Section Break",
+   "label": "Typography"
+  },
+  {
+   "description": "Issue title on the cover. CSS font-family value, e.g. 'Limelight', Georgia, serif",
+   "fieldname": "display_font",
+   "fieldtype": "Data",
+   "label": "Display Font"
+  },
+  {
+   "description": "Section names and topic titles.",
+   "fieldname": "heading_font",
+   "fieldtype": "Data",
+   "label": "Heading Font"
+  },
+  {
+   "fieldname": "column_break_type_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Small labels: section numbers, contents, roles, footer.",
+   "fieldname": "label_font",
+   "fieldtype": "Data",
+   "label": "Label Font"
+  },
+  {
+   "description": "Paragraph text and contributor names.",
+   "fieldname": "font_family",
+   "fieldtype": "Data",
+   "label": "Body Font"
+  },
+  {
+   "fieldname": "column_break_type_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Normal",
+   "fieldname": "heading_style",
+   "fieldtype": "Select",
+   "label": "Section Heading Style",
+   "options": "Normal\nUppercase"
+  },
+  {
+   "default": "14",
+   "fieldname": "body_font_size",
+   "fieldtype": "Int",
+   "label": "Body Font Size (px)"
+  },
+  {
+   "default": "1.75",
+   "description": "Multiplier, e.g. 1.75",
+   "fieldname": "line_height",
+   "fieldtype": "Float",
+   "label": "Line Height"
+  },
+  {
+   "default": "12",
+   "fieldname": "paragraph_spacing",
+   "fieldtype": "Int",
+   "label": "Paragraph Spacing (px)"
+  },
+  {
+   "fieldname": "layout_section",
+   "fieldtype": "Section Break",
+   "label": "Layout"
+  },
+  {
+   "default": "Center",
+   "fieldname": "masthead_alignment",
+   "fieldtype": "Select",
+   "label": "Masthead Alignment",
+   "options": "Center\nLeft"
+  },
+  {
+   "default": "1",
+   "fieldname": "show_section_numbers",
+   "fieldtype": "Check",
+   "label": "Show Section Numbers"
+  },
+  {
+   "default": "0",
+   "description": "Colour each section title with its accent colour.",
+   "fieldname": "accent_headings",
+   "fieldtype": "Check",
+   "label": "Accent-Coloured Section Titles"
+  },
+  {
+   "fieldname": "column_break_layout_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Hairline",
+   "description": "Line drawn above each plain (non-panel) section.",
+   "fieldname": "divider_style",
+   "fieldtype": "Select",
+   "label": "Section Divider",
+   "options": "Hairline\nDouble\nThick\nDotted\nNone"
+  },
+  {
+   "default": "14",
+   "description": "Rounding of panels, cards and images. 0 = sharp corners.",
+   "fieldname": "corner_radius",
+   "fieldtype": "Int",
+   "label": "Corner Radius (px)"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "border_section",
+   "fieldtype": "Section Break",
+   "label": "Card Border"
+  },
+  {
+   "fieldname": "border_color",
+   "fieldtype": "Color",
+   "label": "Border Colour"
+  },
+  {
+   "default": "0",
+   "fieldname": "border_width",
+   "fieldtype": "Int",
+   "label": "Border Width (px)"
+  },
+  {
+   "fieldname": "column_break_border",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "None",
+   "fieldname": "border_style",
+   "fieldtype": "Select",
+   "label": "Border Style",
+   "options": "None\nSolid\nDashed\nDotted\nDouble"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "watermark_section",
+   "fieldtype": "Section Break",
+   "label": "Watermark & Branding"
+  },
+  {
+   "fieldname": "watermark_image",
+   "fieldtype": "Attach Image",
+   "label": "Watermark Image"
+  },
+  {
+   "default": "10",
+   "description": "Opacity of the watermark image (0-100)",
+   "fieldname": "watermark_opacity",
+   "fieldtype": "Int",
+   "label": "Watermark Opacity (%)"
+  },
+  {
+   "fieldname": "column_break_watermark",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "header_banner_image",
+   "fieldtype": "Attach Image",
+   "label": "Header Banner Image"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "advanced_section",
+   "fieldtype": "Section Break",
+   "label": "Advanced"
+  },
+  {
+   "description": "Escape hatch for anything not covered above. Merged into the print/preview output after the theme styles.",
+   "fieldname": "custom_css",
+   "fieldtype": "Code",
+   "label": "Custom CSS",
+   "options": "CSS"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-08-30 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Newsletter",
+ "name": "Newsletter Style",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

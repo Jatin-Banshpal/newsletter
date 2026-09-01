@@ -26,7 +26,8 @@ app_license = "mit"
 
 # include js, css files in header of desk.html
 # app_include_css = "/assets/newsletter/css/newsletter.css"
-# app_include_js = "/assets/newsletter/js/newsletter.js"
+# Lets Attach Image fields accept .heic/.webp/.tiff etc. (see public/js/newsletter.js)
+app_include_js = "/assets/newsletter/js/newsletter.js"
 
 # include js, css files in header of web template
 # web_include_css = "/assets/newsletter/css/newsletter.css"
@@ -77,10 +78,18 @@ app_license = "mit"
 # ----------
 
 # add methods and filters to jinja environment
-# jinja = {
-# 	"methods": "newsletter.utils.jinja_methods",
-# 	"filters": "newsletter.utils.jinja_filters"
-# }
+jinja = {
+	"methods": [
+		"newsletter.utils.hex_to_rgba",
+		"newsletter.utils.file_url",
+	]
+}
+
+# File uploads
+# ------------
+# Transcode browser/PDF-hostile image formats (HEIC, HEIF, AVIF, WebP, TIFF,
+# JPEG-2000, PSD) to JPEG/PNG before they are written to disk. See files.py.
+write_file = "newsletter.files.write_file"
 
 # Installation
 # ------------

@@ -1,0 +1,191 @@
+{
+ "actions": [],
+ "autoname": "format:CONTENT-{#####}",
+ "creation": "2026-08-30 14:00:00.000000",
+ "description": "One employee's write-up for an issue, filed under a Topic. A topic can have many contents in a month; they print in Sort Order.",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "newsletter_issue",
+  "topic",
+  "column_break_title",
+  "section",
+  "status",
+  "sort_order",
+  "submitted_by",
+  "body_section",
+  "body",
+  "style_section",
+  "style",
+  "contributors_section",
+  "contributors",
+  "media_section",
+  "media",
+  "links_section",
+  "reference_links"
+ ],
+ "fields": [
+  {
+   "description": "Headline of this piece. If a topic has just one content with the same title as the topic, only the topic heading is printed.",
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "newsletter_issue",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Newsletter Issue",
+   "options": "Newsletter Issue",
+   "reqd": 1
+  },
+  {
+   "description": "Only topics placed in the chosen issue are offered.",
+   "fieldname": "topic",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Topic",
+   "options": "Newsletter Topic",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_title",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Set automatically from where the topic sits in this issue.",
+   "fieldname": "section",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Section",
+   "options": "Newsletter Section",
+   "read_only": 1
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Draft\nSubmitted\nApproved"
+  },
+  {
+   "description": "Order among contents of the same topic in this issue. Leave blank for the next number; picking a taken number swaps places with that content.",
+   "fieldname": "sort_order",
+   "fieldtype": "Int",
+   "label": "Sort Order"
+  },
+  {
+   "default": "__user",
+   "fieldname": "submitted_by",
+   "fieldtype": "Link",
+   "label": "Submitted By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "body_section",
+   "fieldtype": "Section Break",
+   "label": "Content"
+  },
+  {
+   "fieldname": "body",
+   "fieldtype": "Text Editor",
+   "label": "Content"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "style_section",
+   "fieldtype": "Section Break",
+   "label": "Style (optional override)"
+  },
+  {
+   "description": "Overrides the card colours for this content only. Leave blank to inherit.",
+   "fieldname": "style",
+   "fieldtype": "Link",
+   "label": "Style",
+   "options": "Newsletter Style"
+  },
+  {
+   "fieldname": "contributors_section",
+   "fieldtype": "Section Break",
+   "label": "Contributors"
+  },
+  {
+   "fieldname": "contributors",
+   "fieldtype": "Table",
+   "label": "Contributors",
+   "options": "Newsletter Content Contributor"
+  },
+  {
+   "fieldname": "media_section",
+   "fieldtype": "Section Break",
+   "label": "Photos / Videos"
+  },
+  {
+   "fieldname": "media",
+   "fieldtype": "Table",
+   "label": "Media",
+   "options": "Newsletter Content Media"
+  },
+  {
+   "fieldname": "links_section",
+   "fieldtype": "Section Break",
+   "label": "Reference Links & Files"
+  },
+  {
+   "fieldname": "reference_links",
+   "fieldtype": "Table",
+   "label": "Reference Links",
+   "options": "Newsletter Content Link"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-08-30 14:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Newsletter",
+ "name": "Newsletter Content",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Employee"
+  },
+  {
+   "create": 1,
+   "if_owner": 1,
+   "role": "Employee",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "title,topic,newsletter_issue",
+ "show_title_field_in_link": 1,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "title",
+ "track_changes": 1
+}
