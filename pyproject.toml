@@ -12,6 +12,9 @@ dependencies = [
     "pillow-heif>=1.0", # HEIC/HEIF decoding for upload transcoding (newsletter/files.py)
 ]
 
+[tool.bench.frappe-dependencies]
+frappe = ">=16.0.0-dev,<18.0.0"
+
 [build-system]
 requires = ["flit_core >=3.4,<4"]
 build-backend = "flit_core.buildapi"
